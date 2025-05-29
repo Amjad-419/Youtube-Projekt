@@ -13,3 +13,79 @@ html {
 body {
     font-family: "Roboto","Arial",sans-serif;
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.left-section img{
+    width: 46%;
+    padding-left: 16px;
+}
+
+.mid-section{
+    display: flex;
+    align-items: center;
+    margin-left: -9%;
+}
+
+.mid-section form{
+    display: flex;
+    height: 40px;
+    width: 628px;
+}
+
+.mid-section input{
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+    padding: 12px;
+    font-size: 1.6rem;
+    border: 1px solid #d3d3d3 ;
+    border-right: none;
+}
+.mid-section button{
+    width: 64px;
+    border: 1px solid #d3d3d3;
+    border-radius: 0 20px 20px 0;
+    padding-top: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+.mid-section button:hover{
+    border-color: #c6c6c6;
+    background-color: #cdcdcd;
+}
+
+.mid-section .mic{
+    border: 1px solid #d3d3d3;
+    padding: 8px;
+    border-radius: 50%;
+    margin-left: 12px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+.mid-section .mic:hover{
+    border-color: #c6c6c6 ;
+    background-color: #cdcdcd;
+}
+
+.right-section{
+    display: flex;
+    justify-content: space-between;
+    width: 138px;
+}
+
+.right-section a{
+    text-decoration: none;
+    color: black;
+}
