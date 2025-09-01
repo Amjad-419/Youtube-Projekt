@@ -1,4 +1,305 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Roboto","Arial",sans-serif;
+}
+
+/* ========== HEADER ========== */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+    background: white;
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.left-section img{
+    width: 46%;
+    padding-left: 16px;
+}
+
+.mid-section{
+    display: flex;
+    height: 40px;
+    width: 100%;   
+    max-width: 900px;
+}
+
+.mid-section form{
+    display: flex;
+    height: 40px;
+    width: 628px;
+}
+
+.mid-section input{
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+    padding: 12px;
+    font-size: 1.6rem;
+    border: 1px solid #d3d3d3 ;
+    border-right: none;
+}
+.mid-section button{
+    width: 64px;
+    border: 1px solid #d3d3d3;
+    border-radius: 0 20px 20px 0;
+    padding-top: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+.mid-section button:hover{
+    border-color: #c6c6c6;
+    background-color: #cdcdcd;
+}
+
+.mid-section .mic{
+    border: 1px solid #d3d3d3;
+    padding: 8px;
+    border-radius: 50%;
+    margin-left: 12px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+.mid-section .mic:hover{
+    border-color: #c6c6c6 ;
+    background-color: #cdcdcd;
+}
+
+.right-section{
+    display: flex;
+    justify-content: space-between;
+    width: 138px;
+}
+
+.right-section a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ========== CONTENT AREA ========== */
+.content-area{
+    height: calc(100vh - 56px);
+    display: flex;
+    background-color: #f9f9f9;
+}
+
+aside{
+    height: 100%;
+    width: 230px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    padding-right: 15px;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:hover{
+    background-color: #e6e6e6;
+}
+
+.nav-link span{
+    margin-left: 24px;
+    font-size: 1.4em;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #030303;
+}
+hr{
+    background-color: #e5e5e5;
+    height: 1.3px;
+    border: none;
+    margin: 10px 0;
+}
+
+nav p{
+    font-size: 1.4rem;
+    color: #606060;
+    padding: 8px 16px;
+    text-transform: uppercase;
+}
+
+.channel-img{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    padding: 35px 15px;
+    border-top: 1px solid #ddd;
+    overflow: auto;
+}
+
+.videos-area{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.video{
+   width: 330px;
+   margin-bottom: 40px;
+   cursor: pointer;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 187px;
+    margin-bottom: 12px;
+}
+
+.thumbnail img{
+    height: 100%;
+    width: 100%;
+}
+
+.video-details{
+    display: flex;
+}
+.creator-img img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+
+.title a {
+    text-decoration: none;
+}
+
+.video-title{
+    color: rgb(3,3, 3);
+    font-size: 1.6rem;
+    max-width: 278px;
+    font-weight: 500;
+    line-height: 2.2rem;
+    margin-bottom: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* تابلت */
+@media (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  .content-area {
+    flex-direction: column;
+  }
+
+  .mid-section {
+    flex: 1;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mid-section form {
+    width: 100%;
+  }
+
+  .videos-area {
+    justify-content: center;
+  }
+
+  .video {
+    width: 48%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px;
+  }
+
+  .right-section {
+    width: auto;
+    gap: 12px;
+  }
+}
+
+/* موبايل صغير */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mid-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mid-section form {
+    margin-top: 8px;
+    width: 100%;       
+    max-width: 100%; 
+  }
+    .mid-section input {
+    width: 100%;      
+    font-size: 1.6rem; 
+  }
+
+  .video {
+    width: 100%;
+  }
+
+  .video-title {
+    font-size: 1.4rem;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin : 0;
@@ -215,3 +516,90 @@ main{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 } 
+
+
+/* ========== Für Geräte unter 768px ========== *
+@media (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  .content-area {
+    flex-direction: column;
+  }
+
+  .mid-section {
+    flex: 1;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mid-section form {
+    width: 100%;
+  }
+
+  .mid-section input {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .mid-section button {
+    width: 48px;
+  }
+
+  .videos-area {
+    justify-content: center;
+  }
+
+  .video {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .thumbnail {
+    height: auto;
+  }
+
+  .video-title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px;
+  }
+
+  .right-section {
+    width: auto;
+    gap: 12px;
+  }
+}
+
+/* ========== Für Geräte unter 480px ========== *
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mid-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mid-section form {
+    margin-top: 8px;
+  }
+
+  .video-title {
+    font-size: 1.2rem;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}*/
